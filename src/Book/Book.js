@@ -11,16 +11,18 @@ const RenderBook = ({bookId, books}) => {
   const book = bookIndex !== -1 ? books[bookIndex] : emptyBook;
 
   return (
-    <Content className='book-content'>
-      <h1>
+    <Layout>
+      <Content className='book-content'>
+        <h1>
+          {book.title}
+        </h1>
 
-      </h1>
+        <p>
+          {book.description}
+        </p>
 
-      <p>
-
-      </p>
-
-    </Content>
+      </Content>
+    </Layout>
   );
 }
 
