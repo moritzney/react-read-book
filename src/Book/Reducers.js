@@ -17,7 +17,7 @@ const BooksReducer = (state = initialState, action) => {
   switch (action.type) {
     case SELECT_BOOK:
 
-      return (Object.assign({}, state, {...state, noteId: action.id} ));
+      return (Object.assign({}, state, {...state, bookId: action.id} ));
 
       default:
         return state;
@@ -27,3 +27,5 @@ const BooksReducer = (state = initialState, action) => {
 const bookApp = combineReducers({
   BooksReducer,
 });
+
+export default bookApp;
