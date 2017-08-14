@@ -24,3 +24,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.book-list h3 {
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.book-list li {
+  text-align: left;
+}
+
+.book-content {
+  background: #ffffff;
+  margin: 20px;
+  padding: 20px;
+}
