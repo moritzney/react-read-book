@@ -13,10 +13,13 @@ const initialState = {
 }
 
 const BooksReducer = (state = initialState, action) => {
-
+  // extra empty line not required
   switch (action.type) {
     case SELECT_BOOK:
+      // extra empty line not required
 
+      // Might be preferable to have it on multiple line, for easier refactoring
+      // What do you think?
       return (Object.assign({}, state, {...state, bookId: action.id} ));
 
       default:
@@ -24,6 +27,8 @@ const BooksReducer = (state = initialState, action) => {
   }
 };
 
+// Should be on its own '/src/reducers/index.js' file
+// What do you think?
 const bookApp = combineReducers({
   BooksReducer,
 });

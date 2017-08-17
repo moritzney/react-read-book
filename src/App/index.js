@@ -8,6 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/**
+          * why the extra space? before the RenderBooksList
+          */}
 
         <Layout>
           <RenderBooksList />

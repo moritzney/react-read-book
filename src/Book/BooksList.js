@@ -10,7 +10,10 @@ const RenderBooksList = (props) => {
     <Sider className='book-list' width={250} style={{ height: '100vh' }}>
       <h3>Book list</h3>
 
-      <Menu theme="dark" mode="inline" onClick={({key}) => {props.onBookClick(key)}}>
+      {/**
+        * forgot the ';' and space between brackets {}
+        */}
+      <Menu theme="dark" mode="inline" onClick={({key}) => { props.onBookClick(key); }}>
         {
           props.books.map((bookItem) => <Menu.Item key={bookItem.id}>
               <Icon type='book' />
@@ -32,6 +35,9 @@ const mapStateToProps = state => {
   }
 }
 
+// prefer one line dispatch functions
+// do not forget the comma (,) and the semi-colon (;)
+// in case the function should be more than one line, it should be encapsulated in an handler function
 const mapDispatchToProps = dispatch => {
   return {
     onBookClick: id => {
